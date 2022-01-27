@@ -1,10 +1,10 @@
 // External libraries
 import React from 'react'
-import { Image } from 'react-native'
+import { Image, Text } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 
 // Components
-import Marvel from '../../components/Marvel'
-import Sidebar from '../../components/Sidebar'
+import Header from '../../components/Header'
 import LittleCard from './components/LittleCard'
 import MediumCard from './components/MediumCard'
 import BigCard from './components/BigCard'
@@ -16,39 +16,43 @@ import Menu from '../../assets/images/menu.png'
 import {
   ColumnContent,
   Container,
-  Content,
-  RowContainer,
+  RedButton,
   RowContent,
   SmallText,
   SmallTitle,
+  SmallTitleButton,
   Title
 } from './styles'
+import Sidebar from '../../components/Sidebar'
 
 const Home = () => {
+  const navigation = useNavigation()
+
   return (
     <Container>
-      <Content>
-        <RowContainer>
-          <Image source={Menu} />
-          <Marvel fontSize={30} />
-        </RowContainer>
-        <RowContent>
-          <Sidebar />
-          <ColumnContent>
-            <Title>Top 10 - Personagens Populares</Title>
-            <BigCard />
-            <SmallText>
-              Wanda Maximoff foi sequestrada da Sérvia e 
-              trazida para a Montanha Wundagore, base do 
-              Alto Evolucionário. 
-            </SmallText>
-            <SmallTitle>Aparições:</SmallTitle>
-            <LittleCard />
+      <Header />
+      <RowContent>
+        <Sidebar />
+        <ColumnContent>
+          <Title>Top 10 - Personagens Populares</Title>
+          <BigCard />
+          <SmallText>
+            Wanda Maximoff foi sequestrada da Sérvia e 
+            trazida para a Montanha Wundagore, base do 
+            Alto Evolucionário. 
+          </SmallText>
+          <RedButton><Text>Ver mais</Text></RedButton>
+          <SmallTitle>Aparições:</SmallTitle>
+          <LittleCard />
+          <RowContent style={{ width: 300 }}>
             <SmallTitle>Personagens:</SmallTitle>
-            <MediumCard />
-          </ColumnContent>
-        </RowContent>
-      </Content>
+            <SmallTitleButton onPress={() => navigation.navigate('AllItems')}>
+              <SmallTitle>+ Ver todos</SmallTitle>
+            </SmallTitleButton>
+          </RowContent>
+          <MediumCard />
+        </ColumnContent>
+      </RowContent>
     </Container>
   )
 }

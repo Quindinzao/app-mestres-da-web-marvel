@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 // Components
 import Login from '../screens/Login'
 import Home from '../screens/Home'
+import AllItems from '../screens/AllItems'
 
 // Styled
 import theme from '../styles/theme'
@@ -30,6 +31,11 @@ const AppRoutes: React.FC = () => {
       <stackRoutes.Screen
         name = 'Home'
         component = {Home}
+      />
+      
+      <stackRoutes.Screen
+        name = 'AllItems'
+        component = {AllItems}
       />
     
     </stackRoutes.Navigator>

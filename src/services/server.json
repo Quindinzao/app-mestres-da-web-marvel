@@ -1,11 +1,38 @@
 {
-  "users": [{
+  "characteres": [
+    {
       "id": 1,
       "name": "Andrew",
       "location": "Brazil"
-  }, {
+    }, 
+    {
       "id": 2,
       "name": "Julio",
       "location": "Canadá"
-  }]
+    }
+  ],
+  "movies": [
+    {
+      "id": 1,
+      "name": "Andrew",
+      "location": "Brazil"
+    }, 
+    {
+      "id": 2,
+      "name": "Julio",
+      "location": "Canadá"
+    }
+  ],
+  "comics": [
+    {
+      "id": 1,
+      "name": "Andrew",
+      "location": "Brazil"
+    }, 
+    {
+      "id": 2,
+      "name": "Julio",
+      "location": "Canadá"
+    }
+  ]
 }

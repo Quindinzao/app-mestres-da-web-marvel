@@ -23,25 +23,32 @@ const SidebarItem = (props: {
   color?: string
 }) => {
   return (
-    <LinearGradient
-      colors={['transparent', theme.colors.red_500]}
-      style={{
-        width: '100%',
-        borderRadius: 17.5
-      }}
+    <ContainerTouchableOpacity 
+      onPress={props.onPress}
+      activeOpacity={0.7}
+      width={props.width}
+      height={props.height}
+      marginTop={props.marginTop}
+      marginBottom={props.marginBottom}
+      marignLeft={props.marginLeft}
+      marginRight={props.marginRight}
+      paddingHorizontal={props.paddingHorizontal}
+      paddingVertical={props.paddingVertical}
+      borderRadius={props.borderRadius}
     >
-      <ContainerTouchableOpacity 
-        onPress={props.onPress}
-        activeOpacity={0.7}
-        width={props.width}
-        height={props.height}
-        marginTop={props.marginTop}
-        marginBottom={props.marginBottom}
-        marignLeft={props.marginLeft}
-        marginRight={props.marginRight}
-        paddingHorizontal={props.paddingHorizontal}
-        paddingVertical={props.paddingVertical}
-        borderRadius={props.borderRadius}
+      <LinearGradient
+        colors={['transparent', theme.colors.red_500]}
+        start={{x:0,y:1}}
+	      end={{x:1,y:0}}
+        style={{
+          width: 104,
+          height: 40,
+          paddingHorizontal: 12,
+          alignItems: 'flex-end',
+          justifyContent: 'center',
+          borderTopLeftRadius: 17.5,
+          borderTopRightRadius: 17.5
+        }}
       >
         <TextTitle
           fontSize={props.fontSize}
@@ -49,8 +56,8 @@ const SidebarItem = (props: {
         >
           {props.children}
         </TextTitle>
-      </ContainerTouchableOpacity>
-    </LinearGradient>
+      </LinearGradient>
+    </ContainerTouchableOpacity>
   )
 }
 

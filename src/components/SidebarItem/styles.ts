@@ -32,9 +32,9 @@ export const ContainerTouchableOpacity = styled.TouchableOpacity<ContainerToucha
   align-items: flex-end;
   justify-content: flex-start;
 
-  border-radius: ${props => props.borderRadius};
-
   transform: rotate(90deg);
+
+  border-radius: ${props => props.borderRadius};
 `
 
 interface TextTitleProps {

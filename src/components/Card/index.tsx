@@ -6,7 +6,7 @@ import { Container } from './styles'
 
 const Card = (
   props: { 
-//   children?: ReactNode
+  children?: ReactNode
   width?: string
   height?: string
   marginTop?: string
@@ -32,7 +32,7 @@ const Card = (
       border={props.border}
       borderRadius={props.borderRadius}
     >
-      {/* {props.children} */}
+      {props.children}
     </Container>
   )
 }

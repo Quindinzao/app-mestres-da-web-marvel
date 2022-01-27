@@ -14,9 +14,9 @@ const Sidebar = () => {
       <SidebarItem 
         onPress={() => null} 
         width='104px'
-        height='49.5px'
+        height='40px'
         marginTop='0px'
-        marginBottom='36px'
+        marginBottom='48px'
         marginLeft='0px'
         marginRight='0px'
         paddingHorizontal='0px'
@@ -30,14 +30,13 @@ const Sidebar = () => {
       <SidebarItem 
         onPress={() => null} 
         width='104px'
-        height='49.5px'
+        height='40px'
         marginTop='0px'
-        marginBottom='36px'
+        marginBottom='48px'
         marginLeft='0px'
         marginRight='0px'
         paddingHorizontal='0px'
         paddingVertical='0px'
-        backgroundColor={theme.colors.red_500}
         borderRadius='17.5px'
         fontSize='12px'
         color={theme.colors.text}
@@ -47,9 +46,9 @@ const Sidebar = () => {
       <SidebarItem 
         onPress={() => null} 
         width='104px'
-        height='49.5px'
+        height='40px'
         marginTop='0px'
-        marginBottom='36px'
+        marginBottom='48px'
         marginLeft='0px'
         marginRight='0px'
         paddingHorizontal='0px'

@@ -23,6 +23,8 @@ export const Container = styled.View<ContainerProps>`
   margin-left: ${props => props.marginLeft};
   margin-right: ${props => props.marginRight};
 
+  justify-content: flex-end;
+
   border: ${props => props.border};
   border-radius: ${props => props.borderRadius};
 `

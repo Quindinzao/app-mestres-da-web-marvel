@@ -12,24 +12,6 @@ export const Container = styled.View`
   background-color: ${theme.colors.background};
 `
 
-export const Content = styled.View`
-  width: 100%;
-
-  flex: 1;
-  align-items: center;
-  justify-content: flex-start;
-`
-
-export const RowContainer = styled.View`
-  width: 100%;
-
-  padding: 40px;
-
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-`
-
 export const RowContent = styled.View`
   align-items: center;
   justify-content: space-between;
@@ -37,11 +19,15 @@ export const RowContent = styled.View`
 `
 
 export const ColumnContent = styled.View`
-  width: 100%;
+  /* width: calc(100% - 40px); */
+  max-width: 89%;
   height: 100%;
 
+  padding-left: 12px;
+  padding-right: 18px;
+
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: column;
 `
 
@@ -56,8 +42,19 @@ export const SmallText = styled.Text`
   color: ${theme.colors.text};
 `
 
+export const RedButton = styled.TouchableOpacity`
+  color: ${theme.colors.red_500};
+  font-size: 10px;
+`
+
 export const SmallTitle = styled.Text`
   margin-top: 24px;
   font-size: 17px;
+  color: ${theme.colors.text};
+`
+
+export const SmallTitleButton = styled.TouchableOpacity`
+  font-size: 17px;
+  font-weight: 600;
   color: ${theme.colors.text};
 `
