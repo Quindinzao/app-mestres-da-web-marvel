@@ -1,16 +1,17 @@
 // External libraries
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Image, Text } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 
 // Components
 import Header from '../../components/Header'
+import Sidebar from '../../components/Sidebar'
 import LittleCard from './components/LittleCard'
 import MediumCard from './components/MediumCard'
 import BigCard from './components/BigCard'
 
-// Assets
-import Menu from '../../assets/images/menu.png'
+// Services
+import api from '../../services/api'
 
 // Styled
 import {
@@ -23,10 +24,25 @@ import {
   SmallTitleButton,
   Title
 } from './styles'
-import Sidebar from '../../components/Sidebar'
+
+interface DataProps {
+  id: number
+  name: string
+  description: string
+  appears: [string]
+  streaming: [string]
+  review: number
+}
 
 const Home = () => {
   const navigation = useNavigation()
+  const [characteresData, setCharacteresData] = useState<DataProps[]>([])
+  
+  useEffect(() => {
+    api.get('characteres').then(({data}) => setCharacteresData(data))
+  }, [])
+
+  console.log(characteresData)
 
   return (
     <Container>
@@ -37,9 +53,7 @@ const Home = () => {
           <Title>Top 10 - Personagens Populares</Title>
           <BigCard />
           <SmallText>
-            Wanda Maximoff foi sequestrada da Sérvia e 
-            trazida para a Montanha Wundagore, base do 
-            Alto Evolucionário. 
+            {/* {characteresData[0]} */}
           </SmallText>
           <RedButton><Text>Ver mais</Text></RedButton>
           <SmallTitle>Aparições:</SmallTitle>

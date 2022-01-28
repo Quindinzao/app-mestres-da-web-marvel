@@ -55,7 +55,6 @@ const AllItems = () => {
                 borderRadius: 30
               }}
             >
-              <View>
                 <TitleCard>
                   Homem-Aranha
                 </TitleCard>
@@ -64,9 +63,8 @@ const AllItems = () => {
                   Peter Parker se torna o amigo da vizinhança, 
                   o Homem-Aranha.
                 </TextCard>
-              </View>
               <ButtonCard>
-                ver detalhes
+                
               </ButtonCard>
             </LinearGradient>
           </Card>

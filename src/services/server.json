@@ -1,38 +1,117 @@
 {
+  "users": [
+    {
+      "email": "joao@mestresdaweb.com",
+      "password": "jaoaprendizdaweb"
+    }
+  ],
   "characteres": [
     {
       "id": 1,
-      "name": "Andrew",
-      "location": "Brazil"
+      "name": "Wanda Maximoff",
+      "description": "Wanda Maximoff foi sequestrada da Sérvia e trazida para a Montanha Wundagore, base do Alto Evolucionário.",
+      "appears": [
+        "Capitão América: Guerra Civil",
+        "Vingadores",
+        "Miranha"
+      ],
+      "review": 4
     }, 
     {
       "id": 2,
-      "name": "Julio",
-      "location": "Canadá"
+      "name": "Miranha",
+      "description": "Após ser mordido por uma aranha radioativa, Peter Parker se torna o amigo da vizinhança, o Homem-Aranha.",
+      "appears": [
+        "Miranha 1",
+        "Wanda Vision",
+        "Miranha 3, o melhor filme"
+      ],
+      "review": 5
+    },
+    {
+      "id": 3,
+      "name": "Capetão América",
+      "description": "Após ser mordido por uma aranha radioativa, Peter Parker se torna o amigo da vizinhança, o Homem-Aranha.",
+      "appears": [
+        "Miranha 1",
+        "Capetão Américo 2",
+        "Miranha 3, o melhor filme"
+      ],
+      "review": 3
+    },
+    {
+      "id": 4,
+      "name": "Luciano Hulck",
+      "description": "Após ser mordido por uma aranha radioativa, Peter Parker se torna o amigo da vizinhança, o Homem-Aranha.",
+      "appears": [
+        "Miranha 1",
+        "Miranha 2",
+        "Miranha 3, o melhor filme"
+      ],
+      "review": 3
     }
   ],
   "movies": [
     {
       "id": 1,
-      "name": "Andrew",
-      "location": "Brazil"
-    }, 
+      "name": "Guerra Infinita",
+      "description": "Homem de Ferro, Thor, Hulk e os Vingadores se unem para combater seu inimigo mais poderoso, o maligno Thanos.",
+      "streaming": ["Disney", "Amazon"],
+      "review": 5
+    },
     {
       "id": 2,
-      "name": "Julio",
-      "location": "Canadá"
+      "name": "Guerra Finita",
+      "description": "Homem de Ferro, Thor, Hulk e os Vingadores se unem para combater seu inimigo mais poderoso, o maligno Thanos.",
+      "streaming": ["Disney", "Amazon"],
+      "review": 5
+    },
+    {
+      "id": 3,
+      "name": "Guerra Infinita, mas que acaba",
+      "description": "Homem de Ferro, Thor, Hulk e os Vingadores se unem para combater seu inimigo mais poderoso, o maligno Thanos.",
+      "streaming": ["Disney", "Amazon"],
+      "review": 3
+    },
+    {
+      "id": 4,
+      "name": "Guerra que já acabou faz tempo",
+      "description": "Homem de Ferro, Thor, Hulk e os Vingadores se unem para combater seu inimigo mais poderoso, o maligno Thanos.",
+      "streaming": ["Disney", "Amazon"],
+      "review": 4
     }
   ],
   "comics": [
     {
       "id": 1,
-      "name": "Andrew",
-      "location": "Brazil"
-    }, 
+      "name": "Parábola",
+      "description": "O único oponente do Devorador de Mundos é o herói que ele aprisionou na Terra: o Surfista Prateado...",
+      "streaming": ["Amazon", "Disney"],
+      "review": 5
+    },
     {
       "id": 2,
-      "name": "Julio",
-      "location": "Canadá"
+      "name": "Paráquadrado: dscp, mestres da web, eu tinha que mandar essa",
+      "description": "O único oponente do Devorador de Mundos é o herói que ele aprisionou na Terra: o Surfista Prateado...",
+      "streaming": ["Amazon"],
+      "review": 5
+    },
+    {
+      "id": 1,
+      "name": "Continuabola: dscp de novo",
+      "description": "O único oponente do Devorador de Mundos é o herói que ele aprisionou na Terra: o Surfista Prateado...",
+      "streaming": ["Amazon", "Disney"],
+      "review": 5
+    },
+    {
+      "id": 1,
+      "name": "Em busca de poder",
+      "description": "O único oponente do Devorador de Mundos é o herói que ele aprisionou na Terra: o Surfista Prateado...",
+      "streaming": ["Amazon", "Disney"],
+      "review": 5
     }
+  ],
+  "test": [
+    1, 2, 3, 4
   ]
 }

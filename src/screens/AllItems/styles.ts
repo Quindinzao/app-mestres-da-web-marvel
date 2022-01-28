@@ -34,8 +34,8 @@ export const RowContainer = styled.View`
 export const GridContainer = styled.View`
   width: 100%;
 
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
+  /* grid-template-columns: auto auto; */
 `
 
 export const Title = styled.Text`
@@ -57,7 +57,7 @@ export const TextCard = styled.Text`
   margin-top: 12px;
   font-size: 8px;
   font-weight: 400;
-  text-align: start;
+  text-align: left;
   color: ${theme.colors.text};
 `
 
