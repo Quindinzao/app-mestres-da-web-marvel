@@ -1,28 +1,45 @@
 // External libraries
-import { LinearGradient } from 'expo-linear-gradient'
-import React from 'react'
-import { Image, View } from 'react-native'
+import React, { useEffect, useState } from 'react'
+import { FlatList, Image } from 'react-native'
 
-// Components
-import Card from '../../components/Card'
+// Services
+import api from '../../services/api'
 
 // Assets
 import Return from '../../assets/images/return.png'
 
 // Styled
-import theme from '../../styles/theme'
 import {
-  ButtonCard,
   Container,
   Content,
-  GridContainer,
   RowContainer,
-  TextCard,
-  Title,
-  TitleCard
+  Title
 } from './styles'
+import ItemHero from './components/ItemHero'
+
+interface DataProps {
+  id: number
+  name: string
+  description: string
+  appears: [string]
+  streaming: [string]
+  review: number
+}
 
 const AllItems = () => {
+  const [characteresData, setCharacteresData] = useState<DataProps[]>([])
+  
+  useEffect(() => {
+    api.get('characteres').then(async ({data}) => setCharacteresData(data))
+  })
+
+  const list = [
+    {id: 1, name: 'joao'},
+    {id: 2, name: 'hugo'},
+    {id: 3, name: 'juca'},
+    {id: 4, name: 'yasmin'},
+  ]
+
   return (
     <Container>
       <Content>
@@ -30,45 +47,10 @@ const AllItems = () => {
           <Image source={Return} />
           <Title>Personagens</Title>
         </RowContainer>
-        <GridContainer>
-          <View>
-            
-          </View>
-          <Card
-            width='161px'
-            height='245px'
-            marginTop='24px'
-            marginBottom='0px'
-            marginLeft='0px'
-            marginRight='0px'
-            border={`2px solid ${theme.colors.red_500}`}
-            borderRadius='30px'
-          >
-            <LinearGradient 
-              colors={[theme.colors.red_500, 'transparent']}
-              style={{
-                width: 160,
-                height: 131,
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                padding: 12,
-                borderRadius: 30
-              }}
-            >
-                <TitleCard>
-                  Homem-Aranha
-                </TitleCard>
-                <TextCard>
-                  Após ser mordido por uma aranha radioativa, 
-                  Peter Parker se torna o amigo da vizinhança, 
-                  o Homem-Aranha.
-                </TextCard>
-              <ButtonCard>
-                
-              </ButtonCard>
-            </LinearGradient>
-          </Card>
-        </GridContainer>
+        <FlatList 
+          data={list} 
+          renderItem={({ item }) => <ItemHero data={item} />} 
+        />
       </Content>
     </Container>
   )
